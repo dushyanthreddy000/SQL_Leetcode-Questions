@@ -1,0 +1,5 @@
+select distinct num as ConsecutiveNums from 
+(
+select num,lead(num) over(order by id) as lead_num, lag(num) over (order by id) as lag_num from logs
+)t
+where lead_num=num and num=lag_num
