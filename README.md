@@ -1,1 +1,1 @@
-# SQL_Leetcode-Questions
+# SQL_Leetcode_Solutions
