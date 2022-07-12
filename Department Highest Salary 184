@@ -1,0 +1,1 @@
+select department,employee,salary from (select Department.name as Department,Employee.name as Employee,salary,rank() over(partition by Department.name order by salary desc) as highest_salary from Employee left join Department on Employee.departmentid = Department.id ) as a where highest_salary = 1
