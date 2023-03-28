@@ -1,0 +1,8 @@
+This question is from interview query was asked by: Twitter
+select 
+    action, 
+    rank() over(order by count(action) desc) as ranks
+from events
+where date(created_at) between '2020-11-22' and '2020-11-28' 
+group by action
+limit 5
